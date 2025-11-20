@@ -1,76 +1,26 @@
-﻿Test ID,Feature,Pre-condition,Test scenario,Steps to reproduce,Expected Result,Actual Result,"Pass/Fail
-/Not executed/Suspended",Priority
-TC-001,Login,User is on the Login Page,Login with valid credentials,"1) Navigate to https://www.saucedemo.com/
-2) Enter ""standard_user"" in ""Username"" field
-3) Enter ""secrect_sauce"" in ""Password"" field
-4) Click ""Login"" button","User is successfully logged in and 
-redirected to the inventory page (/inventory.html)","User is successfully logged in and 
-redirected to the inventory page (/inventory.html)",Pass,High
-TC-002,Login,User is on the Login Page,Login with invalid password,"1) Navigate to URL
-2) Enter ""standard_user"" in ""Username"" field
-3) Enter ""wrong_password"" in ""Password"" field
-4) Click ""Login"" button","User remain on the login page. 
-An error message appears: ""Epic sadface: Username and password do not match any user in this service","User remain on the login page. 
-An error message appears: ""Epic sadface: Username and password do not match any user in this service",Pass,High
-TC-003,Login,User is on the Login Page,"Login with a ""locked_out_user"" 
-in Username field","1) Navigate to URL
-2) Enter ""locked_out_user"" in ""Username"" field
-3) Enter ""secret_sauce"" in ""Password"" field
-4) Click ""Login"" button","User remain on the login page. 
-An error message appears: ""Epic sadface: Sorry, this user has been locked out""","User remain on the login page. 
-An error message appears: ""Epic sadface: Sorry, this user has been locked out""",Pass,High
-TC-004,Login,User is on the Login Page,Login with a blank username,"1) Navigate to URL
-2) Leave ""Username"" field blank
-3) Enter ""secret_sauce"" in ""Password"" field
-4) Click ""Login"" button","User remains on the login page. 
-An error message appears: ""Epic sadface: Username is required"".","User remains on the login page. 
-An error message appears: ""Epic sadface: Username is required"".",Pass,Medium
-TC-005,Login,User is on the Login Page,Login with a blank password,"1) Navigate to URL
-2) Enter ""standard_user"" in ""Username"" field
-3) Leave ""Password"" field blank
-4) Click ""Login"" button","User remains on the login page. 
-An error message appears: ""Epic sadface: Password is required"".","User remains on the login page. 
-An error message appears: ""Epic sadface: Password is required"".",Pass,Medium
-TC-006,Login,User is on the Login Page,Login with a problem user,"1) Navigate to URL
-2) Enter ""problem_user"" in ""Username"" field
-3) Enter ""secret_sauce"" in ""Password"" field
-4) Click ""Login"" button",User is successfully logged in, but the inventory images are incorrect (e.g, wrong dog picture),"User is successfully logged in. 
-All inventory images are replaced with the same picture of a dog. This matches the expected ""problem"" state.",Pass,Medium
-TC-007,Logout,"User is logged in as ""standard_user""",User Logout from Inventory page,"1) Click the ""Menu"" (hambuger) icon
-2) Click the ""Logout"" link","User is successfully logged out 
-and redirected to Login page.","User is successfully logged out 
-and redirected to the Login page.",Pass,High
-TC-008,Inventory,"User is logged in as ""standard_user""",Add a single item to cart,"1) On the inventory page, click ""Add to cart"" 
-for ""Sauce Labs Backpack""","The cart icon in the top-right corner
-shows a ""1"" badge. The button for ""Sauce Labs Backpack"" changes to ""Remove""","The cart icon in the top-right corner
-shows a ""1"" badge. The button for ""Sauce Labs Backpack"" changes to ""Remove""",Pass,High
-TC-009,Inventory,"User is logged in as ""standard_user""",Add multiple items to cart,"1) Click ""Add to cart"" for ""Sauce Labs Backpack""
-2) Click ""Add to cart"" for ""Sauce Labs Bike Light""","The cart icon in the top-right corner shows a ""2"" badge. 
-Both items show a ""Remove"" button.","The cart icon in the top-right corner shows a ""2"" badge. 
-Both items show a ""Remove"" button.",Pass,High
-TC-010,Inventory,"User has added ""Sauce Labs Backpack"" 
-to the cart (TC-008).",Remove an item from the inventory page,"1) Click the ""Remove"" button for ""Sauce Labs Backpack""","The cart icon's badge disappears. The button for ""Sauce Labs Backpack"" changes back to ""Add to cart"".","The cart icon's badge disappears. The button for ""Sauce Labs Backpack"" changes back to ""Add to cart"".",Pass,Medium
-TC-011,Inventory,"User is logged in as ""standard_user""",Sort Products: Name (A to Z),"1) Click the 'Sort' dropdown
-2) Select 'Name (A to Z)'","The products are sorted alphabetically. ""Sauce Labs Backpack"" is the first item.","The products are sorted alphabetically. ""Sauce Labs Backpack"" is the first item.",Pass,Medium
-TC-012,Inventory,"User is logged in as ""standard_user""",Sort Products: Name (Z to A),"1) Click the 'Sort' dropdown
-2) Select 'Name (Z to A)'","The products are sorted in reverse alphabetical order. ""Test.allTheThings() T-Shirt (Red)"" is the first item.","The products are sorted in reverse alphabetical order. ""Test.allTheThings() T-Shirt (Red)"" is the first item.",Pass,Medium
-TC-013,Inventory,"User is logged in as ""standard_user""",Sort Products: Price (Low to High),"1) Click the 'Sort' dropdown
-2) Select 'Price (low to high)'","The products are sorted by price. ""Sauce Labs Onesie"" ($7.99) is the first item.","The products are sorted by price. ""Sauce Labs Onesie"" ($7.99) is the first item.",Pass,Medium
-TC-014,Inventory,"User is logged in as ""standard_user""",Sort Products: Price (High to Low),"1) Click the 'Sort' dropdown
-2) Select 'Price (high to low)'","The products are sorted by price. ""Sauce Labs Fleece Jacket"" ($49.99) is the first item.","The products are sorted by price. ""Sauce Labs Fleece Jacket"" ($49.99) is the first item.",Pass,Medium
+﻿Test ID,Feature,Pre-condition,Test scenario,Steps to reproduce,Expected Result,Actual Result,"Pass/Fail/Not executed/Suspended",Priority
+TC-001,Login,User is on the Login Page,Login with valid credentials,"1) Navigate to https://www.saucedemo.com/2) Enter ""standard_user"" in ""Username"" field3) Enter ""secrect_sauce"" in ""Password"" field4) Click ""Login"" button","User is successfully logged in and redirected to the inventory page (/inventory.html)","User is successfully logged in and redirected to the inventory page (/inventory.html)",Pass,High
+TC-002,Login,User is on the Login Page,Login with invalid password,"1) Navigate to URL2) Enter ""standard_user"" in ""Username"" field3) Enter ""wrong_password"" in ""Password"" field4) Click ""Login"" button","User remain on the login page. An error message appears: ""Epic sadface: Username and password do not match any user in this service","User remain on the login page. An error message appears: ""Epic sadface: Username and password do not match any user in this service",Pass,High
+TC-003,Login,User is on the Login Page,"Login with a ""locked_out_user"" in Username field","1) Navigate to URL2) Enter ""locked_out_user"" in ""Username"" field3) Enter ""secret_sauce"" in ""Password"" field4) Click ""Login"" button","User remain on the login page. An error message appears: ""Epic sadface: Sorry, this user has been locked out""","User remain on the login page. An error message appears: ""Epic sadface: Sorry, this user has been locked out""",Pass,High
+TC-004,Login,User is on the Login Page,Login with a blank username,"1) Navigate to URL2) Leave ""Username"" field blank3) Enter ""secret_sauce"" in ""Password"" field4) Click ""Login"" button","User remains on the login page. An error message appears: ""Epic sadface: Username is required"".","User remains on the login page. An error message appears: ""Epic sadface: Username is required"".",Pass,Medium
+TC-005,Login,User is on the Login Page,Login with a blank password,"1) Navigate to URL2) Enter ""standard_user"" in ""Username"" field3) Leave ""Password"" field blank4) Click ""Login"" button","User remains on the login page. An error message appears: ""Epic sadface: Password is required"".","User remains on the login page. An error message appears: ""Epic sadface: Password is required"".",Pass,Medium
+TC-006,Login,User is on the Login Page,Login with a problem user,"1) Navigate to URL2) Enter ""problem_user"" in ""Username"" field3) Enter ""secret_sauce"" in ""Password"" field4) Click ""Login"" button",User is successfully logged in, but the inventory images are incorrect (e.g, wrong dog picture),"User is successfully logged in. All inventory images are replaced with the same picture of a dog. This matches the expected ""problem"" state.",Pass,Medium
+TC-007,Logout,"User is logged in as ""standard_user""",User Logout from Inventory page,"1) Click the ""Menu"" (hambuger) icon2) Click the ""Logout"" link","User is successfully logged out and redirected to Login page.","User is successfully logged out and redirected to the Login page.",Pass,High
+TC-008,Inventory,"User is logged in as ""standard_user""",Add a single item to cart,"1) On the inventory page, click ""Add to cart"" for ""Sauce Labs Backpack""","The cart icon in the top-right cornershows a ""1"" badge. The button for ""Sauce Labs Backpack"" changes to ""Remove""","The cart icon in the top-right cornershows a ""1"" badge. The button for ""Sauce Labs Backpack"" changes to ""Remove""",Pass,High
+TC-009,Inventory,"User is logged in as ""standard_user""",Add multiple items to cart,"1) Click ""Add to cart"" for ""Sauce Labs Backpack""2) Click ""Add to cart"" for ""Sauce Labs Bike Light""","The cart icon in the top-right corner shows a ""2"" badge. Both items show a ""Remove"" button.","The cart icon in the top-right corner shows a ""2"" badge. Both items show a ""Remove"" button.",Pass,High
+TC-010,Inventory,"User has added ""Sauce Labs Backpack"" to the cart (TC-008).",Remove an item from the inventory page,"1) Click the ""Remove"" button for ""Sauce Labs Backpack""","The cart icon's badge disappears. The button for ""Sauce Labs Backpack"" changes back to ""Add to cart"".","The cart icon's badge disappears. The button for ""Sauce Labs Backpack"" changes back to ""Add to cart"".",Pass,MediumTC-011,Inventory,"User is logged in as ""standard_user""",Sort Products: Name (A to Z),"1) Click the 'Sort' dropdown2) Select 'Name (A to Z)'","The products are sorted alphabetically. ""Sauce Labs Backpack"" is the first item.","The products are sorted alphabetically. ""Sauce Labs Backpack"" is the first item.",Pass,Medium
+TC-012,Inventory,"User is logged in as ""standard_user""",Sort Products: Name (Z to A),"1) Click the 'Sort' dropdown2) Select 'Name (Z to A)'","The products are sorted in reverse alphabetical order. ""Test.allTheThings() T-Shirt (Red)"" is the first item.","The products are sorted in reverse alphabetical order. ""Test.allTheThings() T-Shirt (Red)"" is the first item.",Pass,Medium
+TC-013,Inventory,"User is logged in as ""standard_user""",Sort Products: Price (Low to High),"1) Click the 'Sort' dropdown2) Select 'Price (low to high)'","The products are sorted by price. ""Sauce Labs Onesie"" ($7.99) is the first item.","The products are sorted by price. ""Sauce Labs Onesie"" ($7.99) is the first item.",Pass,Medium
+TC-014,Inventory,"User is logged in as ""standard_user""",Sort Products: Price (High to Low),"1) Click the 'Sort' dropdown2) Select 'Price (high to low)'","The products are sorted by price. ""Sauce Labs Fleece Jacket"" ($49.99) is the first item.","The products are sorted by price. ""Sauce Labs Fleece Jacket"" ($49.99) is the first item.",Pass,Medium
 TC-015,Inventory,"User is logged in as ""problem_user""",Remove an item from the inventory page,"1) Click the ""Remove"" button for ""Sauce Labs Backpack""","The cart icon's badge disappears. The button for ""Sauce Labs Backpack"" changes back to ""Add to cart"".","The cart icon's badge does not disappear. The button for ""Sauce Labs Backpack"" still remain the same",Fail,High
 TC-016,Cart,"User has added ""Sauce Labs Backpack"" to the cart.",Verify items in cart,1) Click the cart icon in the top-right corner,"The user is redirected to the Cart page (/cart.html). ""Sauce Labs Backpack"" is listed in the cart with quantity 1.","The user is redirected to the Cart page (/cart.html). ""Sauce Labs Backpack"" is listed in the cart with quantity 1.",Pass,High
 TC-017,Cart,"User has ""Sauce Labs Backpack"" in the cart and is on the Cart page.",Remove an item from the cart page,"1) On the cart page, click the ""Remove"" button for ""Sauce Labs Backpack""",The item is removed from the cart list. The cart icon badge (if visible) disappears.,The item is removed from the cart list. The cart icon badge disappears.,Pass,Medium
 TC-018,Cart,User is on the Cart page.,"""Continue Shopping"" button","1) On the cart page, click the ""Continue Shopping"" button",The user is redirected back to the Inventory page (/inventory.html).,The user is redirected back to the Inventory page (/inventory.html).,Pass,Medium
 TC-019,Checkout,User has at least one item in the cart and is on the Cart page.,Navigate to Checkout Step One,"1) Click the ""Checkout"" button",User is redirected to the Checkout Step One page (/checkout-step-one.html).,User is redirected to the Checkout Step One page (/checkout-step-one.html),Pass,High
-TC-020,Checkout,User is on the Checkout Step One page.,Checkout Step One: Blank fields First Name error,"1) Leave ""First Name"" blank
-2) Click ""Continue""","User remains on the page. An error message appears: ""Error: First Name is required"".","User remains on the page. An error message appears: ""Error: First Name is required"".",Pass,Medium
-TC-021,Checkout,User is on the Checkout Step One page.,Checkout Step One: Blank fields Last Name error,"1) Leave ""Last Name""
-2) Click ""Continue""","User remains on the page. An error message appears: ""Error: Last Name is required"".","User remains on the page. An error message appears: ""Error: Last Name is required"".",Pass,Medium
-TC-022,Checkout,User is on the Checkout Step One page.,Checkout Step One: Blank fields Postal Code error,"1) Leave ""Postal Code"" blank
-2) Click ""Continue""","User remains on the page. An error message appears: ""Error: Postal Code is required"".","User remains on the page. An error message appears: ""Error: Postal Code is required"".",Pass,Medium
-TC-023,Checkout,User is on the Checkout Step One page.,Checkout Step One: Fill form and continue,"1) Fill in ""First Name"", ""Last Name"", and ""Postal Code"" with valid data (e.g., ""Test"", ""User"", ""12345"")
-2) Click ""Continue""",User is redirected to the Checkout Step Two page (/checkout-step-two.html).,User is redirected to the Checkout Step Two page (/checkout-step-two.html).,Pass,High
+TC-020,Checkout,User is on the Checkout Step One page.,Checkout Step One: Blank fields First Name error,"1) Leave ""First Name"" blank2) Click ""Continue""","User remains on the page. An error message appears: ""Error: First Name is required"".","User remains on the page. An error message appears: ""Error: First Name is required"".",Pass,Medium
+TC-021,Checkout,User is on the Checkout Step One page.,Checkout Step One: Blank fields Last Name error,"1) Leave ""Last Name""2) Click ""Continue""","User remains on the page. An error message appears: ""Error: Last Name is required"".","User remains on the page. An error message appears: ""Error: Last Name is required"".",Pass,Medium
+TC-022,Checkout,User is on the Checkout Step One page.,Checkout Step One: Blank fields Postal Code error,"1) Leave ""Postal Code"" blank2) Click ""Continue""","User remains on the page. An error message appears: ""Error: Postal Code is required"".","User remains on the page. An error message appears: ""Error: Postal Code is required"".",Pass,Medium
+TC-023,Checkout,User is on the Checkout Step One page.,Checkout Step One: Fill form and continue,"1) Fill in ""First Name"", ""Last Name"", and ""Postal Code"" with valid data (e.g., ""Test"", ""User"", ""12345"")2) Click ""Continue""",User is redirected to the Checkout Step Two page (/checkout-step-two.html).,User is redirected to the Checkout Step Two page (/checkout-step-two.html).,Pass,High
 TC-024,Checkout,User has completed Checkout Step One.,Checkout Step Two: Verify items and total,1) Observe the page,"The page correctly displays the item(s) from the cart. A ""Payment Information"", ""Shipping Information"", and ""Item total"" are displayed.","The page correctly displays the item(s) from the cart. ""Payment Information"", ""Shipping Information"", and ""Item total"" are displayed.",Pass,High
 TC-025,Checkout,User is on the Checkout Step Two page.,Checkout Step Two: Finish order,"1) Click the ""Finish"" button","User is redirected to the Checkout Complete page (/checkout-complete.html). A ""Thank you for your order!"" message is displayed.","User is redirected to the Checkout Complete page (/checkout-complete.html). A ""Thank you for your order!"" message is displayed.",Pass,High
 TC-026,Checkout,User is on the Checkout Complete page.,Checkout Complete: Back to Home,"1) Click the ""Back Home"" button",User is redirected back to the Inventory page (/inventory.html). The cart is now empty.,User is redirected back to the Inventory page (/inventory.html). The cart is now empty.,Pass,High
